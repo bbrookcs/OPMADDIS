@@ -1,9 +1,5 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte';
-    
-    let animationUrl = '../1743617980279.json';
-    let animationUrl2 = '../1743618253745.json';
     
     // For smooth scrolling to sections
     function scrollToSection(id: string) {
@@ -218,14 +214,10 @@ EJentertainment.co
         <h2 class="section-title gradient-text-2">Our Services</h2>
         <p class="section-subtitle">What we offer to make your event special</p>
         
-        <!-- Right side animation -->
+        
+        <!-- Right decoration (using a GIF instead of Lottie) -->
         <div class="right-decoration">
-          <DotLottieSvelte
-            src={animationUrl2}
-            autoplay
-            loop
-            style="width: 100%; height: 100%;"
-          />
+          <img src="./1743618253745.gif" alt="Decorative animation" style="width: 100%; height: auto;">
         </div>
         
         <div class="services-grid">
@@ -483,6 +475,17 @@ EJentertainment.co
     
     
     
+    .left-decoration {
+      position: absolute;
+      left: -35px;
+      top: 40%;
+      transform: translateY(-50%);
+      width: 350px;
+      height: 350px;
+      z-index: 0;
+      display: none;
+    }
+    
     .right-decoration {
       position: absolute;
       right: -35px;
@@ -697,17 +700,6 @@ EJentertainment.co
     
     .mobile-nav-link:hover {
       color: #b2f5ea;
-    }
-    
-    .mobile-nav-link.mobile-events-btn {
-      background: 
-        linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)) padding-box,
-        linear-gradient(45deg, #00fff2, #006d6d, #20b2aa, #00fff2) border-box;
-      background-size: 300% 300%;
-      border-radius: 0.5rem;
-      border: 2px solid transparent;
-      padding: 0.5rem;
-      animation: animateGradient 5s ease infinite;
     }
     
     .nav-icon {
@@ -1234,14 +1226,6 @@ EJentertainment.co
       .event-image-container {
         height: 400px;
       }
-    }
-    
-    /* Lottie Animation Styling */
-    .lottie-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 1rem;
     }
     
     @media (min-width: 768px) {

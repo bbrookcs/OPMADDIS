@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', Roboto, sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #00fff2, #006d6d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.gradient-text-2 {
+  background: linear-gradient(to right, #003f3f, #00fff2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (max-width: 788px) {
+  .gradient-text {
+    background: linear-gradient(to right, #00dcd1, #009696);
+    -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  }
+  .gradient-text-2 {
+    background: linear-gradient(to right, #006c6c, #00c2b8);
+    -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  }
+}
+
